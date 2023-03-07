@@ -59,3 +59,59 @@ body {
   margin: 0 1.5rem;
 }
 
+.avatar {
+  border-radius: 50%;
+  border: 10px solid #2a2a72;
+  height: 150px;
+  width: 150px;
+}
+
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+}
+
+.user-info h2 {
+  margin-top: 0;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  display: flex;
+  margin: 0 5px 0 5px;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  text-decoration: none;
+  color: #fff;
+  background-color: #212a72;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    max-width: 400px;
+  }
+}
