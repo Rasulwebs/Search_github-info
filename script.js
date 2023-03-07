@@ -46,3 +46,35 @@ function createUserCard(user) {
     `;
   main.innerHTML = cardHTML;
 }
+
+function createErrorCard(msg) {
+    const cardHTML = `
+          <div class="card">
+              <h1>${msg}</h1>
+          </div>
+      `;
+    main.innerHTML = cardHTML;
+  }
+  
+  function addReposToCard(repos) {
+    const reposEl = document.getElementById("repos");
+    repos.slice(0, 5).forEach((repo) => {
+      const repoEl = document.createElement("a");
+      repoEl.classList.add("repo");
+      repoEl.href = repo.html_url;
+      repoEl.target = "_blank";
+      repoEl.innerText = repo.name;
+      reposEl.appendChild(repoEl);
+    });
+  }
+  
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const user = search.value;
+    if (user) {
+      getUser(user);
+      search.value = "";
+    }else{
+  alert("Not Found")
+  }
+  });
